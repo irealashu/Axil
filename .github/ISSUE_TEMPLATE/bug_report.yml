@@ -1,0 +1,30 @@
+name: Bug Report
+description: Create a report to help us improve Axil
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report a bug in Axil!
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: snippet
+    attributes:
+      label: Axil Source Code
+      description: Provide the minimal `.axil` source code snippet that reproduces the issue.
+      render: axil
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS version, Python version, Browser (if Studio issue)
+      placeholder: Ubuntu 24.04 / Python 3.12 / Chrome
+    validations:
+      required: true

@@ -1,10 +1,11 @@
 # Axil: Zero-Dependency Stream-Directional Language & Native ELF Compiler
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Target: Linux x86_64](https://img.shields.io/badge/Target-x86__64--linux--elf-cyan.svg)](https://github.com)
-[![Syscalls: Direct 0F 05](https://img.shields.io/badge/Syscalls-Direct%200F%2005-emerald.svg)](https://github.com)
-[![Dependencies: Zero](https://img.shields.io/badge/Dependencies-Zero%20(No%20libc)-purple.svg)](https://github.com)
-[![Tests: 5/5 Passing](https://img.shields.io/badge/Tests-5%2F5%20Passing%20(100%25)-green.svg)](https://github.com)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE.md)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-irealashu%2FAxil-181717.svg?logo=github)](https://github.com/irealashu/Axil)
+[![Target: Linux x86_64](https://img.shields.io/badge/Target-x86__64--linux--elf-cyan.svg)](https://github.com/irealashu/Axil)
+[![Syscalls: Direct 0F 05](https://img.shields.io/badge/Syscalls-Direct%200F%2005-emerald.svg)](https://github.com/irealashu/Axil)
+[![Dependencies: Zero](https://img.shields.io/badge/Dependencies-Zero%20(No%20libc)-purple.svg)](https://github.com/irealashu/Axil)
+[![Tests: 5/5 Passing](https://img.shields.io/badge/Tests-5%2F5%20Passing%20(100%25)-green.svg)](https://github.com/irealashu/Axil)
 
 **Axil** is an original, keyword-free, stream-directional systems programming language and toolchain that compiles directly into standalone Linux x86-64 ELF executables with zero external dependencies — no GCC, no Clang, no LLVM, and no libc.
 
@@ -162,7 +163,7 @@ Test Results Matrix:
 
 ---
 
-## What's New
+## What's New in v1.0
 
 ### Language Evolution
 - **Structured Pattern Matching**: Replaced limited branching with declarative match tables for clean control flow.
@@ -206,6 +207,17 @@ Built static files will be emitted to `./dist/` ready for hosting on GitHub Page
 
 ---
 
+## Contributing & Community
+
+We welcome contributions from everyone! Please check out our community guidelines:
+- **[Contributing Guide](CONTRIBUTING.md)**: Architectural standards, AST/IR guides, and test harness workflows.
+- **[Code of Conduct](CODE_OF_CONDUCT.md)**: Community standards and pledge.
+- **[Security Policy](SECURITY.md)**: Vulnerability disclosure procedure.
+- **[Issue Tracker](https://github.com/irealashu/Axil/issues)**: Bug reports and feature proposals.
+
+---
+
 ## License
 
-This project is licensed under the **Apache License, Version 2.0**. See the [LICENSE](LICENSE) file for complete details.
+This project is licensed under the **Apache License, Version 2.0**. See the [LICENSE.md](LICENSE.md) file for complete details.
+

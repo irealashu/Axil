@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Axil Native Compiler (axilc) v1.1.0
+Axil Native Compiler (axilc) v1.0
 Compiles Axil stream programs directly into Linux x86-64 ELF executables.
 Zero external dependencies (pure Python standard library: sys, struct, os, re).
 """
@@ -10,7 +10,7 @@ import os
 import struct
 import re
 
-VERSION = "1.1.0"
+VERSION = "1.0"
 
 class Token:
     __slots__ = ('type', 'val', 'line', 'col')

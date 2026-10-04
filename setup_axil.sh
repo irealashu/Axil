@@ -89,7 +89,7 @@ EOF
 
 # 2. docs/SPECIFICATION.md
 cat << 'EOF' > axil-lang/docs/SPECIFICATION.md
-# Axil Language Specification v1.1
+# Axil Language Specification v1.0
 **An Original, Keyword-Free, Stream-Directional Systems Programming Language**
 
 ---
@@ -462,7 +462,7 @@ import os
 import struct
 import re
 
-VERSION = "1.1.0"
+VERSION = "1.0"
 
 class Token:
     __slots__ = ('type', 'val', 'line', 'col')
@@ -1110,7 +1110,7 @@ BIN_DIR="${SCRIPT_DIR}/bin"
 mkdir -p "${BIN_DIR}"
 
 echo -e "${BOLD}${BLUE}================================================================${NC}"
-echo -e "${BOLD}${CYAN}            AXIL ZERO-DEPENDENCY TEST HARNESS v1.1             ${NC}"
+echo -e "${BOLD}${CYAN}            AXIL ZERO-DEPENDENCY TEST HARNESS v1.0             ${NC}"
 echo -e "${BOLD}${BLUE}================================================================${NC}"
 
 declare -A EXPECTED_OUTPUTS

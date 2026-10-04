@@ -144,9 +144,14 @@ exit_group(${result.exitCode}) = ?
     <div className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full flex flex-col gap-4">
       {/* Sleek Studio Header & Presets */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
-        <h1 className="text-xl font-bold tracking-tight text-white">
-          Developer Studio
-        </h1>
+        <div className="flex items-center gap-2.5">
+          <h1 className="text-xl font-bold tracking-tight text-white">
+            Developer Studio
+          </h1>
+          <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">
+            axilc v1.0
+          </span>
+        </div>
 
         {/* Presets Selector Bar */}
         <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">

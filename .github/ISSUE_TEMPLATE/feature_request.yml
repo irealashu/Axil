@@ -1,0 +1,21 @@
+name: Feature Request / RFC
+description: Suggest an idea or architectural proposal for Axil
+labels: ["enhancement", "rfc"]
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for proposing a new capability or architectural feature for Axil!
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Motivation
+      description: Is your feature request related to a problem or limitation?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution / Syntax
+      description: Describe the proposed stream syntax, opcode mapping, or compiler behavior.
+    validations:
+      required: true

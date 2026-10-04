@@ -1,47 +1,58 @@
+import React from 'react';
+
 export function WhatsNewPage() {
   const sections = [
     {
-      title: "Language Evolution",
+      title: "v1.0 Core Language & Compiler",
       items: [
+        { title: "Zero-Dependency Standalone ELF64", desc: "Official v1.0 release of axilc.py capable of compiling keyword-free stream code directly into native Linux x86-64 ELF executables with zero libc or external assembler dependencies." },
         { title: "Structured Pattern Matching", desc: "Replaced limited ternary logic with powerful, readable match tables for cleaner control flow." },
-        { title: "Tuple Streaming", desc: "Introduced support for passing multiple values through the pipeline without auxiliary variables." },
-        { title: "Improved Diagnostics", desc: "Compiler now tracks precise column/line offsets for clearer error messages." }
+        { title: "Tuple Streaming Primitives", desc: "Introduced native support for passing multiple values through the pipeline without auxiliary variables." },
+        { title: "High-Precision Source Diagnostics", desc: "Compiler tracks precise column and line offsets for visual error indicators (^)." }
       ]
     },
     {
       title: "Developer Studio & Tooling",
       items: [
-        { title: "Revamped Workspace", desc: "The Developer Studio is now a dedicated, high-performance page with streamlined navigation." },
-        { title: "Direct Pipeline Controls", desc: "Integrated the primary Run action directly into the code editor toolbar with instant keyboard execution (Ctrl+Enter)." },
-        { title: "Optimized Documentation", desc: "Updated and improved the scrollability and view of the Documentation & Specification pages for better readability." }
+        { title: "Pure-Black Production Studio", desc: "Unified high-performance workspace with instant split-pane terminal inspection (stdout, strace, hexdump)." },
+        { title: "Direct Pipeline Controls", desc: "Integrated the primary Run action directly into the code editor toolbar with instant keyboard execution (Ctrl+Enter / Cmd+Enter)." },
+        { title: "Live Register & Stack Dock", desc: "Real-time state inspection for hardware registers (RAX, RBX, RBP, RSP), stack frame variables, and ELF64 header fields." }
       ]
     },
     {
       title: "Systems & Memory Foundations",
       items: [
-        { title: "Sized Types & Pointers", desc: "Begun implementation of native bit-width types and address-of/dereference operators for systems programming." },
-        { title: "Memory Safety", desc: "Initial work on linear memory scope management." }
+        { title: "Sized Types & Pointers", desc: "Foundational implementation of native bit-width types (u8, u16, u32, u64, f64) and address-of/dereference operators for systems programming." },
+        { title: "Linear Memory Scope Safety", desc: "Deterministic scope cleanup backed by direct kernel mmap allocations." }
       ]
     },
     {
-      title: "Infrastructure",
+      title: "Open Source & Distribution",
       items: [
-        { title: "Cross-Platform Readiness", desc: "Foundations for multi-architecture IR generation (x86, ARM, WASM) and cross-OS syscall abstraction." }
+        { title: "Official GitHub Release (v1.0)", desc: "Full open-source release on GitHub (irealashu/Axil) with Apache 2.0 license, contributing guide, and GitHub Actions CI/CD." },
+        { title: "100% Automated Test Suite", desc: "Automated verification test runner (test_runner.sh) covering all language primitives with 100% pass verification." }
       ]
     }
   ];
 
   return (
     <div className="max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-6">
-      <div className="pb-3 border-b border-slate-800/80">
-        <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-          What's New
-        </h1>
-        <p className="mt-0.5 text-xs text-slate-400">
-          Changelog and toolchain architectural upgrades.
+      {/* Header Banner */}
+      <div className="pb-4 border-b border-slate-800/80">
+        <div className="flex items-center gap-2 mb-1">
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+            What's New in Axil
+          </h1>
+          <span className="px-2 py-0.5 rounded-full text-[11px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+            v1.0
+          </span>
+        </div>
+        <p className="text-xs text-slate-400">
+          Language evolution, compiler updates, and toolchain upgrades.
         </p>
       </div>
 
+      {/* Release Sections */}
       <div className="space-y-4">
         {sections.map((section, idx) => (
           <div key={idx} className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-5 sm:p-6">
