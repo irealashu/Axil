@@ -1,0 +1,6 @@
+{
+  "name": "Axil: Zero-Dependency Native Compiler Toolchain",
+  "description": "Original, keyword-free, stream-directional programming language that compiles directly into standalone Linux x86-64 ELF executables with zero external dependencies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

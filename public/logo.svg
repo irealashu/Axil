@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Energy Field -->
+    <radialGradient id="axil-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.32" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Top Isometric Facet (Sunlight / Key Highlight) -->
+    <linearGradient id="facet-top" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9" />
+      <stop offset="35%" stop-color="#22d3ee" />
+      <stop offset="70%" stop-color="#0891b2" />
+      <stop offset="100%" stop-color="#0e7490" />
+    </linearGradient>
+
+    <!-- Left Isometric Facet (Mid-Tone Brushed Titanium) -->
+    <linearGradient id="facet-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="25%" stop-color="#0284c7" />
+      <stop offset="65%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#082f49" />
+    </linearGradient>
+
+    <!-- Right Isometric Facet (Dark Obsidian / Core Depth) -->
+    <linearGradient id="facet-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="35%" stop-color="#0f766e" />
+      <stop offset="75%" stop-color="#115e59" />
+      <stop offset="100%" stop-color="#042f2e" />
+    </linearGradient>
+
+    <!-- Front Left Bevel / Chamfer -->
+    <linearGradient id="facet-front-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#075985" />
+    </linearGradient>
+
+    <!-- Front Right Bevel -->
+    <linearGradient id="facet-front-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="50%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#134e4a" />
+    </linearGradient>
+
+    <!-- Floating 3D Core Energy Conduit -->
+    <linearGradient id="core-plasma" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="20%" stop-color="#a5f3fc" />
+      <stop offset="55%" stop-color="#38bdf8" />
+      <stop offset="85%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <!-- Metallic Specular Edge Gradients -->
+    <linearGradient id="specular-top" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="40%" stop-color="#a5f3fc" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3" />
+    </linearGradient>
+
+    <linearGradient id="specular-spine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#67e8f9" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#0284c7" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#083344" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Inner Cavity Gradient (Dark Recessed Core) -->
+    <linearGradient id="inner-void" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="60%" stop-color="#041226" />
+      <stop offset="100%" stop-color="#08203e" />
+    </linearGradient>
+
+    <!-- 3D Realistic Depth Shadows -->
+    <filter id="shadow-floor" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="36" stdDeviation="32" flood-color="#020617" flood-opacity="0.95" />
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#082f49" flood-opacity="0.6" />
+    </filter>
+
+    <filter id="laser-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="3" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="ao-trench" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#010409" flood-opacity="0.85" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Radiant Aura Behind Monolith -->
+  <circle cx="256" cy="256" r="235" fill="url(#axil-glow)" />
+
+  <!-- Cast Ground Shadow (Simulates ground plane reflection in 3D) -->
+  <ellipse cx="256" cy="460" rx="170" ry="38" fill="#010409" opacity="0.75" filter="url(#ao-trench)" />
+
+  <!-- MAIN 3D ISOMETRIC PRISM STRUCTURE -->
+  <g filter="url(#shadow-floor)">
+
+    <!-- 1. LEFT ISOMETRIC FACET (Extruded downward from top apex) -->
+    <!-- Apex: 256, 52 | Left Tip: 78, 155 | Bottom Left: 78, 355 | Center Base: 256, 458 -->
+    <path d="M 256 52 L 78 155 L 78 355 L 256 458 L 256 255 Z" fill="url(#facet-left)" />
+
+    <!-- 2. RIGHT ISOMETRIC FACET -->
+    <!-- Apex: 256, 52 | Right Tip: 434, 155 | Bottom Right: 434, 355 | Center Base: 256, 458 -->
+    <path d="M 256 52 L 434 155 L 434 355 L 256 458 L 256 255 Z" fill="url(#facet-right)" />
+
+    <!-- 3. TOP ILLUMINATED ROOF CAP (True 30-deg Isometric Polygon) -->
+    <path d="M 256 52 L 434 155 L 256 255 L 78 155 Z" fill="url(#facet-top)" />
+
+    <!-- 4. INNER 3D CARVED CHAMBER (The Negative-Space Axil 'A' Structure) -->
+    <!-- Recessed trench walls simulating carved architectural depth -->
+    <g filter="url(#ao-trench)">
+      <!-- Chamber Back Wall (Deep Void) -->
+      <path d="M 256 120 L 372 186 L 372 340 L 256 406 L 140 340 L 140 186 Z" fill="url(#inner-void)" />
+
+      <!-- Chamber Inner Left Facet -->
+      <path d="M 140 186 L 256 252 L 256 406 L 140 340 Z" fill="#031f38" opacity="0.9" />
+
+      <!-- Chamber Inner Right Facet -->
+      <path d="M 256 252 L 372 186 L 372 340 L 256 406 Z" fill="#032a26" opacity="0.95" />
+
+      <!-- Chamber Inner Top Facet -->
+      <path d="M 256 120 L 372 186 L 256 252 L 140 186 Z" fill="#063e5e" opacity="0.8" />
+    </g>
+
+    <!-- 5. 3D FLOATING 'A' MONOLITH WITH BEVELED EDGES -->
+    <!-- Front Left Leg of A -->
+    <path d="M 256 116 L 256 160 L 182 358 L 132 358 Z" fill="url(#facet-front-left)" />
+    <!-- Front Right Leg of A -->
+    <path d="M 256 116 L 256 160 L 330 358 L 380 358 Z" fill="url(#facet-front-right)" />
+    <!-- Crossbar of A (The Directional Stream Bridge '|') -->
+    <path d="M 174 274 L 338 274 L 324 308 L 188 308 Z" fill="#0284c7" />
+
+    <!-- 6. HIGH-PRECISION 3D SPECULAR RIDGES (Metallic Chamfer Highlights) -->
+    <!-- Top-left outer chamfer (Sun glare edge) -->
+    <path d="M 78 155 L 256 52" stroke="url(#specular-top)" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    <!-- Top-right outer chamfer -->
+    <path d="M 256 52 L 434 155" stroke="url(#specular-top)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8" />
+    <!-- Center vertical front spine -->
+    <path d="M 256 255 L 256 458" stroke="url(#specular-spine)" stroke-width="3.5" stroke-linecap="round" fill="none" />
+    <!-- Left outer corner edge -->
+    <path d="M 78 155 L 78 355" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6" />
+    <!-- Right outer corner edge -->
+    <path d="M 434 155 L 434 355" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5" />
+    <!-- Base chamfer -->
+    <path d="M 78 355 L 256 458 L 434 355" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4" />
+
+    <!-- 7. NEON STREAM ENERGY CONDUIT (Directional Stream Pipeline | > $) -->
+    <g filter="url(#laser-glow)">
+      <!-- Left Stream Inflow (Entering from lower left) -->
+      <path d="M 158 350 L 256 152 L 354 350" fill="none" stroke="url(#core-plasma)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+      
+      <!-- Central Stream Bridge Line -->
+      <path d="M 198 262 L 314 262" fill="none" stroke="#e0f2fe" stroke-width="12" stroke-linecap="round" />
+
+      <!-- Glowing Directional Arrow Head at Peak (Ascending Stream) -->
+      <polygon points="256,128 266,150 256,144 246,150" fill="#ffffff" />
+
+      <!-- Stream Core Energy Nodes (Active Stream Heads) -->
+      <circle cx="256" cy="152" r="8" fill="#ffffff" />
+      <circle cx="256" cy="262" r="7" fill="#67e8f9" />
+      <circle cx="198" cy="262" r="5" fill="#38bdf8" />
+      <circle cx="314" cy="262" r="5" fill="#2dd4bf" />
+      <circle cx="158" cy="350" r="6" fill="#06b6d4" />
+      <circle cx="354" cy="350" r="6" fill="#10b981" />
+    </g>
+
+    <!-- 8. APEX OPTICAL STAR GLINT (Cinema-grade Lens Flare) -->
+    <g transform="translate(256, 52)">
+      <ellipse cx="0" cy="0" rx="14" ry="1.5" fill="#ffffff" opacity="0.9" />
+      <ellipse cx="0" cy="0" rx="1.5" ry="14" fill="#ffffff" opacity="0.9" />
+      <circle cx="0" cy="0" r="3" fill="#ffffff" />
+    </g>
+
+    <!-- Secondary Glint on Right Ridge -->
+    <g transform="translate(345, 103.5)">
+      <ellipse cx="0" cy="0" rx="8" ry="1.2" fill="#a5f3fc" opacity="0.75" />
+      <ellipse cx="0" cy="0" rx="1.2" ry="8" fill="#a5f3fc" opacity="0.75" />
+    </g>
+  </g>
+</svg>

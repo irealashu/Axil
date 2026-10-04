@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import "prismjs/themes/prism-tomorrow.css";
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Axil token highlighting overrides matching theme */
+.token.operator {
+  color: #22d3ee !important; /* cyan-400 */
+}
+.token.register {
+  color: #c084fc !important; /* purple-400 */
+}
+.token.keyword {
+  color: #f472b6 !important; /* pink-400 */
+}
+.token.string {
+  color: #34d399 !important; /* emerald-400 */
+}
+.token.number {
+  color: #fbbf24 !important; /* amber-400 */
+}
+.token.comment {
+  color: #64748b !important; /* slate-500 */
+  font-style: italic;
+}
+.token.punctuation {
+  color: #94a3b8 !important; /* slate-400 */
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+  background: transparent !important;
+}
